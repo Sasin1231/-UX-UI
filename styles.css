@@ -1,0 +1,100 @@
+body {
+    background-image: url('พื้นหลัง.jpg'); /* ใส่ URL รูปภาพแบล็กกราวด์ */
+    background-size: cover; /* ปรับให้รูปครอบคลุมพื้นที่ทั้งหมด */
+    background-position: center; /* จัดตำแหน่งให้อยู่กึ่งกลาง */
+    background-attachment: fixed; /* ทำให้ภาพแบล็กกราวด์ไม่เลื่อนตามเนื้อหา */
+    margin: 0;
+    font-family: Arial, sans-serif; /* ฟอนต์พื้นฐานของเว็บ */
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+#temple {
+    display: flex;
+    flex-direction: row; /* จัดเรียงในแนวนอน */
+    overflow-x: auto; /* ให้เลื่อนในแนวนอน */
+    scroll-behavior: smooth; /* ทำให้เลื่อนอย่างนุ่มนวล */
+    gap: 10px; /* เพิ่มระยะห่างระหว่างรูปภาพ */
+}
+
+#temple img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* ทำให้ภาพไม่บิดเบี้ยว */
+    border-radius: 8px; /* เพิ่มมุมโค้งมนถ้าต้องการ */
+}
+
+.templeall {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+#imagewatthai {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.autoplay-control {
+    margin: 20px 0;
+}
+
+.autoplay-control button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #007BFF;
+    color: white;
+}
+
+.autoplay-control button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+}
+
+.wat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.wat h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    padding: 10px 0;
+}
